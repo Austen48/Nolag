@@ -1,0 +1,14 @@
+cb_bbb_annex_all = {
+	is_triggered_only = yes
+	no_opinion_hit = yes
+	prerequisites = {
+		has_country_flag = bbb_test_bbb
+		FROM = {
+			has_spy_network_from = {
+				who = ROOT
+				value = 80
+			}
+		}
+	}
+	war_goal = bbb_superiority_crusade
+}

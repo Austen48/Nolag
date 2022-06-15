@@ -1,0 +1,210 @@
+country_decisions = {	
+	bbb_enable_deci_use = {
+		potential = {
+			has_country_flag = bbb_test_bbb
+			NOT = {
+				has_country_flag = bbb_enable_use
+			}
+			num_of_loans = 3
+			NOT = {
+				num_of_loans = 4
+			}
+			was_player = yes
+		}
+		effect = {
+			set_country_flag = bbb_enable_use
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	bbb_disable_deci_use = {
+		potential = {
+			has_country_flag = bbb_test_bbb
+			has_country_flag = bbb_enable_use
+		}
+		effect = {
+			clr_country_flag = bbb_enable_use
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	bbb_start_events = {
+		potential = {
+			has_country_flag = bbb_test_bbb
+			has_country_flag = bbb_enable_use
+			NOT = {
+				has_country_flag = bbb_event_enabled
+			}
+		}
+		effect = {
+			set_country_flag = bbb_event_enabled
+			country_event = {
+				id = bbb_events.5
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	bbb_end_events = {
+		potential = {
+			has_country_flag = bbb_test_bbb
+			has_country_flag = bbb_enable_use
+			has_country_flag = bbb_event_enabled
+		}
+		effect = {
+			clr_country_flag = bbb_event_enabled
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	bbb_test_government = {
+		potential = {
+			has_country_flag = bbb_enable_use
+		}
+		effect = {
+			country_event = {
+				id = bbb_events.2
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	bbb_test_land_combat = {
+		potential = {
+			has_country_flag = bbb_enable_use
+		}
+		effect = {
+			country_event = {
+				id = bbb_events.3
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	bbb_test_navy = {
+		potential = {
+			has_country_flag = bbb_enable_use
+		}
+		effect = {
+			country_event = {
+				id = bbb_events.4
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	bbb_test_ruler = {
+		potential = {
+			has_country_flag = bbb_enable_use
+		}
+		effect = {
+			country_event = {
+				id = bbb_events.6
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	bbb_test_state_colony = {
+		potential = {
+			has_country_flag = bbb_enable_use
+		}
+		effect = {
+			country_event = {
+				id = bbb_events.7
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	bbb_test_diplo = {
+		potential = {
+			has_country_flag = bbb_enable_use
+		}
+		effect = {
+			country_event = {
+				id = bbb_events.8
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	bbb_set_the_flag_of_countries1 = {
+		potential = {
+			NOT = {
+				crown_land_share = 1
+			}
+			NOT = {
+				has_country_flag = bbb_enable_p_1
+			}
+			corruption = 10
+			has_wartaxes = yes
+			num_of_loans = 4
+			NOT = {
+				num_of_loans = 5
+			}
+		}
+		effect = {
+			set_country_flag = bbb_enable_p_1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	bbb_set_the_flag_of_countries2 = {
+		potential = {
+			NOT = {
+				crown_land_share = 1
+			}
+			NOT = {
+				has_country_flag = bbb_enable_p_2
+			}
+			corruption = 10
+			has_wartaxes = no
+			num_of_loans = 7
+			NOT = {
+				num_of_loans = 8
+			}
+			has_country_flag = bbb_enable_p_1
+		}
+		effect = {
+			set_country_flag = bbb_enable_p_2
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	bbb_set_the_flag_of_countries3 = {
+		potential = {
+			NOT = {
+				crown_land_share = 1
+			}
+			NOT = {
+				has_country_flag = bbb_test_bbb
+			}
+			corruption = 10
+			has_wartaxes = yes
+			num_of_loans = 10
+			NOT = {
+				num_of_loans = 11
+			}
+			has_country_flag = bbb_enable_p_2
+		}
+		effect = {
+			set_country_flag = bbb_test_bbb
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

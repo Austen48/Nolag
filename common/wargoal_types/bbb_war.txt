@@ -1,0 +1,61 @@
+bbb_superiority_crusade = {
+	type = superiority
+	
+	attacker = {
+		badboy_factor = 0.01
+		prestige_factor = 1.0
+		peace_cost_factor = 0.01
+		transfer_trade_cost_factor = 0.01
+		allow_annex = yes
+
+		
+		allowed_provinces = {
+			always = yes
+		}
+		
+		peace_options = {
+			po_become_vassal
+			po_demand_provinces
+			po_revoke_cores
+			po_release_vassals
+			po_release_annexed
+			po_change_religion
+			po_gold
+			po_annul_treaties
+			po_form_personal_union
+			po_trade_power
+			po_steer_trade
+			po_revoke_elector
+			po_dismantle_revolution
+			po_humiliate_rival
+			po_independence
+			po_subjugate_vassal
+			po_become_tributary_state
+			po_change_government
+			po_humiliate
+
+		}
+		
+		country_desc = ALL_INFIDELS
+		prov_desc = ALL_PROVS
+	}
+	
+	defender = {
+		badboy_factor = 0.75
+		prestige_factor = 1.25
+		peace_cost_factor = 1.0	
+		
+		allowed_provinces = {
+			always = yes
+		}
+		
+		peace_options = {
+			po_demand_provinces
+		}
+		
+		country_desc = ALL_INFIDELS
+		prov_desc = ALL_PROVS
+	}	
+	
+	war_name = CLAIM_WAR_NAME	
+}
